@@ -62,7 +62,9 @@ function loadMovies(genre) {
 
   const url = new URL("/movies", location.href)
   /* Task 1.4. Add query parameter to the url if a genre is given */
-
+  if(genre){
+    url.searchParams.append("genre", genre)
+  }
   xhr.open("GET", url)
   xhr.send()
 }
@@ -77,6 +79,15 @@ window.onload = function () {
          initialize them with a click handler that calls the 
          loadMovies(...) function above. */
       const genres = JSON.parse(xhr.responseText);
+      let li = new ElementBuilder("li");
+      li.append(new ElementBuilder("button").text("ALL").listener("click", () => loadMovies()));
+      li.appendTo(listElement);
+      for(const genre of genres){
+        li = new ElementBuilder("li");
+        li.append(new ElementBuilder("button").text(genre).listener("click", () => loadMovies(genre)));
+        li.appendTo(listElement);
+      }
+      
 
       /* When a first button exists, we click it to load all movies. */
       const firstButton = document.querySelector("nav button");
