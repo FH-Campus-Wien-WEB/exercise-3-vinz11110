@@ -11,13 +11,13 @@ html, body {
  height: 100vh;
 }
 img{
-  border-radius: 8%;
+  border-radius: 12px;
   max-width: 500px;
   display: block;
   margin: auto;
 }
 p{
-  margin-bottom: 10px;
+  margin: 10px;
 }
 section{
   margin: 10px;
@@ -34,26 +34,6 @@ main{
   grid-area: main;
   overflow-y: auto;
 }
-article{
-  background-color: rgb(255, 234, 186);
-  border-radius: 3%;
-  margin: 20px;
-  padding:10px;
-  box-shadow: 10px 10px 20px rgb(0, 0, 0);
-  flex: 1; 
-  width: 300px;
-  max-width: 300px;
-}
-span{
-  margin-right: 10px;
-}
-.genre{
-  background-color: rgb(215, 215, 215);
-  padding: 5px;
-  border: 2px dotted black;
-  border-radius: 10%;
-}
-
 /* Center the nav's header and list */
 nav {
   display: flex;
@@ -105,9 +85,7 @@ footer{
   flex-wrap:wrap;
   flex-direction: row;
 }
-p{
-  margin: 10px;
-}
+
 @media(max-width: 600px){
   body {
   display: grid;
@@ -141,11 +119,9 @@ p{
 
 
 /* From here on styling from exercise 1 */
-img {
-  border-radius: 12px;
-}
-
 article {
+  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+  flex: 1; 
   background-color: lightgray;
   border-radius: 16px;
   padding: 16px;
