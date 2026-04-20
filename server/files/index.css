@@ -125,7 +125,8 @@ article {
   background-color: lightgray;
   border-radius: 16px;
   padding: 16px;
-  width: 384px;
+  width: 300px;
+  max-width: 300px;
   margin: 8px;
 }
 
